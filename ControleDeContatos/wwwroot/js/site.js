@@ -1,7 +1,12 @@
 ﻿let table = new DataTable('#table-contatos');
 
 $(document).ready(function () {
-    $('#table-contatos').DataTable({
+    getDataTable('#tabela-contatos');
+    getDataTable('#tabela-usuarios');
+});
+
+function getDataTable(id) {
+    $(id).DataTable({
         "ordering": true,
         "paging": true,
         "searching": true,
@@ -29,7 +34,7 @@ $(document).ready(function () {
             }
         }
     });
-});
+}
 
 $('.close-alert').Click(function () {
     $('.alert').hide('hide');
