@@ -9,7 +9,27 @@
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
         <a role="button" class="btn btn-primary" asp-controller="Contato" asp-action="Criar">Criar novo contato</a>
     </div>
-    <br></br>
+
+    <br />
+
+    @if (TempData["MensagemSucesso"] == null)
+    {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert">X</button>
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] == null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert">X</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
+
+    <br />
+
     <h1 class="display-4">Listagem de Contatos</h1>
 
     <table class="table">
