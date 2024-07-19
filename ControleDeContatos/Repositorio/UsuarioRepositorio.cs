@@ -48,6 +48,11 @@ namespace ControleDeContatos.Repositorio
             return usuarioDb;
         }
 
+        public Usuario BuscarPorLogin(string login)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
+        }
+
         public List<Usuario> BuscarTodos()
         {
             return _bancoContext.Usuarios.ToList();
