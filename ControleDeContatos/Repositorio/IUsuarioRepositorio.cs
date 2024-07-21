@@ -11,5 +11,6 @@ namespace ControleDeContatos.Repositorio
         Usuario ListarPorId(int id);
         Usuario Atualizar(Usuario usuario);
         bool Apagar(int id);
+        Usuario AlterarSenha(AlterarSenha alterar);
     }
 }
