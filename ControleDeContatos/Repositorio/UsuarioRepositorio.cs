@@ -28,7 +28,7 @@ namespace ControleDeContatos.Repositorio
 
             if (!usuarioDB.SenhaValida(alterarSenha.SenhaAtual)) throw new Exception("Senha atual não confere");
 
-            if (usuarioDB.(alterarSenha.NovaSenha)) throw new Exception("Nova senha deve ser diferente da senha atual");
+            if (usuarioDB.Senha == (alterarSenha.NovaSenha)) throw new Exception("Nova senha deve ser diferente da senha atual");
 
             usuarioDB.SetNovaSenha(alterarSenha.NovaSenha);
             usuarioDB.DataAtualizacao = DateTime.Now;

@@ -45,9 +45,9 @@ namespace ControleDeContatos.Repositorio
             return contatoDb;
         }
 
-        public List<Contato> BuscarTodos()
+        public List<Contato> BuscarTodos(int usuarioId)
         {
-            return _bancoContext.Contatos.ToList();
+            return _bancoContext.Contatos.Where(x => x.UsuarioId == usuarioId).ToList();
         }
 
         public Contato ListarPorId(int id)
